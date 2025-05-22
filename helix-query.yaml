@@ -10,9 +10,6 @@ indices:
       recommended_dosage:
         select: main ul > li:first-child
         value: textContent(el)
-      purpose:
-        select: main ul > li:last-child
-        value: textContent(el)
       ingredients_names:
         select: .specifications > div > div:first-child
         values: textContent(el)
@@ -22,8 +19,17 @@ indices:
       image: 
         select: head > meta[property="og:image"]
         value: attribute(el, "content")
-      description: 
+      properties: 
         select: head > meta[property="og:description"]
+        value: attribute(el, "content")
+      brand: 
+        select: head > meta[name="brand"]
+        value: attribute(el, "content")
+      special_needs: 
+        select: head > meta[name="special_needs"]
+        value: attribute(el, "content")
+      purpose: 
+        select: head > meta[name="purpose"]
         value: attribute(el, "content")
       lastModified:
         select: none
