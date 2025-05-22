@@ -26,7 +26,7 @@ indices:
         select: head > meta[name="brand"]
         value: attribute(el, "content")
       special_needs: 
-        select: head > meta[name="special_needs"]
+        select: head > meta[name="special-needs"]
         value: attribute(el, "content")
       purpose: 
         select: head > meta[name="purpose"]
