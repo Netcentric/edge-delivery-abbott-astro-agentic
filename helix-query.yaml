@@ -20,8 +20,8 @@ indices:
         select: head > meta[property="og:image"]
         value: attribute(el, "content")
       properties: 
-        select: head > meta[property="og:description"]
-        value: attribute(el, "content")
+        select: .features > div > div:last-child
+        values: textContent(el)
       brand: 
         select: head > meta[name="brand"]
         value: attribute(el, "content")
